@@ -39,3 +39,21 @@ def main():
         elif choice == 5: break
         else: print("Неверный выбор.")
     save_data(data)
+
+# === Stage 8: Реализуй текстовый интерфейс команд с меню действий ===
+# Project: PlaylistLog
+def main():
+    print("=== PlaylistLog: Текстовый интерфейс ===")
+    while True:
+        try:
+            cmd = input("\nКоманда (1-5, q=выход): ").strip().lower()
+            if cmd == "q": break
+            elif cmd in ("1", "2", "3", "4", "5"):
+                print(f"Вы выбрали действие {cmd}. Логика обработки команд будет добавлена здесь.")
+                input("Нажмите Enter для продолжения...")
+        except KeyboardInterrupt:
+            print("\nЗавершение работы программы.")
+            break
+
+if __name__ == "__main__":
+    main()
